@@ -98,6 +98,112 @@
 	</header>
 	<main class="main content">
 		<!--
+			Os componentes "images/partners gallery carousel" são muito
+			parecidos.
+
+			No "images", como o asset imagem-1.png tinha um tamanho grande
+			o bastante para poder gerar assets melhores para o mobile e tablets,
+			partindo do princípio de mobile first o src da imagem está
+			configurado com a imagem mobile e as tags source se encarregam
+			de carregar as imagens corretas para os breakpoints definidos.
+
+			O componente "partners gallery carousel" tem mais informações.
+		-->
+		<section class="images gallery carousel">
+			<div class="mask">
+				<ul class="itens">
+					<li class="item">
+						<figure>
+							<picture>
+								<source media="(min-width: 1025px)"
+									srcset="assets/img/contents/imagem-1.png">
+								<source media="(min-width: 541px)"
+									srcset="assets/img/contents/imagem-1-tablet.png, assets/img/contents/imagem-1.png 2x">
+								<source media="(min-width: 280px)"
+									srcset="assets/img/contents/imagem-1-mobile.png, assets/img/contents/imagem-1-mobile-2x.png 2x">
+								<img src="assets/img/contents/imagem-1-mobile.png"
+									height="133"
+									width="224"
+									alt="A imagem 1 retangular de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+									loading="lazy">
+							</picture>
+						</figure>
+					</li>
+					<li class="item">
+						<figure>
+							<picture>
+								<source media="(min-width: 1025px)"
+									srcset="assets/img/contents/imagem-1.png">
+								<source media="(min-width: 541px)"
+									srcset="assets/img/contents/imagem-1-tablet.png, assets/img/contents/imagem-1.png 2x">
+								<source media="(min-width: 280px)"
+									srcset="assets/img/contents/imagem-1-mobile.png, assets/img/contents/imagem-1-mobile-2x.png 2x">
+								<img src="assets/img/contents/imagem-1-mobile.png"
+									height="133"
+									width="224"
+									alt="A imagem 2 retangular de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+									loading="lazy">
+							</picture>
+						</figure>
+					</li>
+					<li class="item">
+						<figure>
+							<picture>
+								<source media="(min-width: 1025px)"
+									srcset="assets/img/contents/imagem-1.png">
+								<source media="(min-width: 541px)"
+									srcset="assets/img/contents/imagem-1-tablet.png, assets/img/contents/imagem-1.png 2x">
+								<source media="(min-width: 280px)"
+									srcset="assets/img/contents/imagem-1-mobile.png, assets/img/contents/imagem-1-mobile-2x.png 2x">
+								<img src="assets/img/contents/imagem-1-mobile.png"
+									height="133"
+									width="224"
+									alt="A imagem 3 retangular de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+									loading="lazy">
+							</picture>
+						</figure>
+					</li>
+				</ul>
+			</div>
+			<ul class="navigation">
+				<li>
+					<button class="button prev" title="Ir para o item anterior" type="button">
+						<span class="screen-reader-only">
+							Ir para o item anterior
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet active" data-item-index-position="1" title="Ir para o item 1" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 1
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet" data-item-index-position="2" title="Ir para o item 2" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 2
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet" data-item-index-position="3" title="Ir para o item 3" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 3
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button next"  title="Ir para o para o próximo item" type="button">
+						<span class="screen-reader-only">
+							Ir para o para o próximo item
+						</span>
+					</button>
+				</li>
+			</ul>
+		</section>
+		<!--
 			O Axe dev tools reclama dos details que estão fechados, acho que
 			isso deve ser algum bug da ferramenta por não entender como a tag
 			funciona.
@@ -157,6 +263,139 @@
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.
 				</p>
 			</details>
+		</section>
+		<!--
+			Ponto a se conversar com o time de UX, UI e Content, textos
+			e links pouco descritivos causam perda de pontos no score
+			de SEO. Por isso está potato, tomato, apple e pineapple.
+
+			O componente "images gallery carousel" tem mais informações.
+		-->
+		<section class="partners gallery carousel">
+			<div class="mask">
+				<ul class="itens">
+					<li class="item">
+						<figure>
+							<img src="assets/img/contents/imagem-2.png"
+								height="94"
+								width="94"
+								alt="A imagem 1 quadrada de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+								loading="lazy">
+							<figcaption>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								</p>
+								<p class="learn-more">
+									<a href="/page-learn-more-about-potato/">
+										Learn more about potato
+									</a>
+								</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="item">
+						<figure>
+							<img src="assets/img/contents/imagem-2.png"
+								height="94"
+								width="94"
+								alt="A imagem 2 quadrada de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+								loading="lazy">
+							<figcaption>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								</p>
+								<p class="learn-more">
+									<a href="/page-learn-more-about-tomato/">
+										Learn more about tomato
+									</a>
+								</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="item">
+						<figure>
+							<img src="assets/img/contents/imagem-2.png"
+								height="94"
+								width="94"
+								alt="A imagem 3 quadrada de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+								loading="lazy">
+							<figcaption>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								</p>
+								<p class="learn-more">
+									<a href="/page-learn-more-about-apple/">
+										Learn morea about apple
+									</a>
+								</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="item">
+						<figure>
+							<img src="assets/img/contents/imagem-2.png"
+								height="94"
+								width="94"
+								alt="A imagem 4 quadrada de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+								loading="lazy">
+							<figcaption>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								</p>
+								<p class="learn-more">
+									<a href="/page-learn-more-about-pineapple/">
+										Learn more about pineapple
+									</a>
+								</p>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+			<ul class="navigation">
+				<li>
+					<button class="button prev" title="Ir para o item anterior" type="button">
+						<span class="screen-reader-only">
+							Ir para o item anterior
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet active" data-item-index-position="1" title="Ir para o item 1" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 1
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet" data-item-index-position="2" title="Ir para o item 2" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 2
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet" data-item-index-position="3" title="Ir para o item 3" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 3
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet" data-item-index-position="4" title="Ir para o item 4" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 4
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button next"  title="Ir para o para o próximo item" type="button">
+						<span class="screen-reader-only">
+							Ir para o para o próximo item
+						</span>
+					</button>
+				</li>
+			</ul>
 		</section>
 		<!--
 			No wireframe não tinha indicativo de campos obrigatórios. Então
