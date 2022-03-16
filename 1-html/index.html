@@ -103,12 +103,23 @@
 			e placeholders. O formulário também deveria ter um botão do
 			tipo reset para limpar os campos, mais questões a se conversar
 			com o time de UX.
+
+			Estou usando o testando com o Lighthouse e o Axe dev tools, mas
+			nenhum dos dois pegou esses bugs de acessibilidade.
+
+			1 - Todo fieldset deve ter um legend.
+			2 - Eu tinha certeza que era type="phone" só que não é type="tel"
+
+			A ferramente super bacana que testa WCAG2 A, AA, AAA e Section 508
+			é essa aqui http://squizlabs.github.io/HTML_CodeSniffer/
 		-->
 		<form class="contact-form" action="/#" method="post">
-			<h2 class="title component">
-				Entre em contato
-			</h2>
 			<fieldset>
+				<legend>
+					<h2 class="title component">
+						Entre em contato
+					</h2>
+				</legend>
 				<div class="group">
 					<label class="label" for="name">
 						Nome:
@@ -122,10 +133,10 @@
 					<input class="field" id="email" name="email" type="email" minlength="5" maxlength="140" placeholder="nome@dominio.local" required>
 				</div>
 				<div class="group">
-					<label class="label" for="phone">
+					<label class="label" for="tel">
 						Telefone:
 					</label>
-					<input class="field" id="phone" name="phone" type="phone" minlength="14" maxlength="15" pattern="[(]([0-9]{2})[)]\s([0-9]{4,5})[-][0-9]{4}$" placeholder="(53) 93030-3030" required>
+					<input class="field" id="tel" name="tel" type="tel" minlength="14" maxlength="15" pattern="[(]([0-9]{2})[)]\s([0-9]{4,5})[-][0-9]{4}$" placeholder="(53) 93030-3030" required>
 				</div>
 				<div class="group">
 					<label class="label" for="message">
