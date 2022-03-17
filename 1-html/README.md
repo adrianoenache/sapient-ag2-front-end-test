@@ -24,3 +24,11 @@ Para ajudar o teste de acessibilidade em arquivos locais sugerimos a utilizaçã
 * [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd)
 * [Edge](https://microsoftedge.microsoft.com/addons/detail/axe-web-accessibility-t/kcenlimkmjjkdfcaleembgmldmnnlfkn)
 * [Firefox](https://addons.mozilla.org/en-us/firefox/addon/axe-devtools/)
+
+---
+
+## Teste WCAG2-AA e Lighthouse
+
+A página do teste está acessível [neste link](https://adrianoenache.dev.br/test-html/).
+
+![alt imagem do teste wcag1aa e lighthouse](test-html-wcag2aa-lighthouse.png)
