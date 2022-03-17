@@ -93,8 +93,138 @@
 	<title>Teste de HTML Front-end Pleno Sapient AG2</title>
 </head>
 <body>
+	<!--
+		Componente do header, no wireframe faltou um label
+		para o campo de input, o Axe deve tools apontou a
+		falta dele e outra ferramenta WCAG2 apontou a falta
+		do submit.
+
+		Obs.: Se você olhar os commits eu construí a página
+		de baixo para cima nos comentários abaixo existem outros
+		pontos a se conversar com os times de UX/UI e Content.
+	-->
 	<header class="main header">
-		<h1>Teste de HTML Front-end Pleno Sapient AG2</h1>
+		<div class="wrapper">
+			<button class="button open-menu" title="Abrir menu principal" type="button">
+				<span class="screen-reader-only">
+					Abrir menu principal
+				</span>
+				<img src="assets/img/ui/menu.svg" height="32" width="32" alt="Ícone de três barras na horizontal sobrepostas com um pequeno espaço vazio entre elas.">
+			</button>
+			<h1>
+				<a href="/">
+					<span class="screen-reader-only">
+						Teste de HTML Front-end Pleno Sapient AG2
+					</span>
+					<img src="assets/img/logo.svg" height="64" width="64" alt="Imagem de logo marca, contém um círculo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas.">
+				</a>
+			</h1>
+			<button class="button open-search" title="Abrir menu de busca" type="button">
+				<span class="screen-reader-only">
+					Abrir menu de busca
+				</span>
+				<img src="assets/img/ui/search.svg" height="32" width="32" alt="Ícone de uma lente de aumento.">
+			</button>
+		</div>
+		<div class="main menu">
+			<button class="button close" title="Fechar menu principal" type="button">
+				<span class="screen-reader-only">
+					Fechar menu principal
+				</span>
+				<img src="assets/img/ui/cross.svg" height="32" width="32" alt="Ícone de duas barras cruzadas formando um X">
+			</button>
+			<nav class="main-navigation" title="Menu principal">
+				<ul>
+					<li>
+						<a href="/quem-somos/">
+							Quem Somos
+						</a>
+					</li>
+					<li>
+						<a href="/trabalhe-conosco/">
+							Trabalhe conosco
+						</a>
+					</li>
+					<li>
+						<a href="/pessoas/">
+							Pessoas
+						</a>
+					</li>
+					<li>
+						<a href="/cases/">
+							Cases
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="social-navigation" title="Nossas redes sociais">
+				<ul>
+					<li>
+						<a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener">
+							<span class="screen-reader-only">
+								Ir para o Instagram
+							</span>
+							<img src="assets/img/social-media/instagram.svg" height="32" width="32" alt="Ícone da marca Instagram">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
+							<span class="screen-reader-only">
+								Ir para o Facebook
+							</span>
+							<img src="assets/img/social-media/facebook.svg" height="32" width="32" alt="Ícone da marca Facebook">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
+							<span class="screen-reader-only">
+								Ir para o LinkediIn
+							</span>
+							<img src="assets/img/social-media/linkedin.svg" height="32" width="32" alt="Ícone da marca LinkediIn">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
+							<span class="screen-reader-only">
+								Ir para o Medium
+							</span>
+							<img src="assets/img/social-media/medium.svg" height="32" width="32" alt="Ícone da marca Medium">
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="search menu">
+			<button class="button close" title="Fechar menu de busca" type="button">
+				<span class="screen-reader-only">
+					Fechar menu de busca
+				</span>
+				<img src="assets/img/ui/cross.svg" height="32" width="32" alt="Ícone de duas barras cruzadas formando um X">
+			</button>
+			<form class="search-form" action="/#search" method="post">
+				<label for="search">
+					O que deseja procurar?
+				</label>
+				<input list="search-tips"
+					id="search"
+					name="search"
+					type="search"
+					placeholder="O que deseja procurar?"
+					title="O que deseja procurar?"
+					maxlength="140" required>
+				<datalist id="search-tips">
+					<option value="Potato">
+					<option value="Tomato">
+					<option value="Apple">
+					<option value="Pineapple">
+				</datalist>
+				<div class="form-actions">
+					<button type="submit">
+						Buscar
+					</button>
+				</div>
+			</form>
+		</div>
 	</header>
 	<main class="main content">
 		<!--
