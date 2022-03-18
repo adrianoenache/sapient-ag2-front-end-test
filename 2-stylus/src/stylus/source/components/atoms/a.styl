@@ -1,0 +1,18 @@
+// Link config
+a
+  --c-d: inherit;
+  --c-h: var(--c-d);
+  --c: var(--c-d);
+  // Rules
+  color: var(--c);
+  text-decoration: var(--td, none);
+  text-transform: var(--tt, uppercase);
+  transition: color var(--transition-0);
+  &:focus
+    animation-name: var(--an, pulse-outline);
+    animation-duration: var(--ad, .3s);
+    animation-iteration-count: var(--aic, 2);
+    animation-timing-function: var(--atf, var(--cubic-bezier-0));
+    outline: 0;
+  &:hover
+    --c: var(--c-h);

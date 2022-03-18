@@ -1,0 +1,11 @@
+// Animation Pulse Outline
+@keyframes pulse-outline {
+  0% {
+    outline: var(--pulse-outline-start-size, 1px) var(--pulse-outline-style, solid) var(--pulse-outline-start-color, var(--border-color-2));
+    outline-offset: 0;
+  }
+  100% {
+    outline: var(--pulse-outline-end-size, var(--pulse-outline-start-size)) var(--pulse-outline-style, solid) var(--pulse-outline-end-color, var(--pulse-outline-start-color));
+    outline-offset: calc(var(--pulse-outline-offset, 10px) * var(--pulse-outline-multiply, 1));
+  }
+}
