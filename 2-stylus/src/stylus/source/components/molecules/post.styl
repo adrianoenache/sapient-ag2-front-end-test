@@ -1,0 +1,21 @@
+// Post
+.post
+  --image-size-notebook: 932px;
+  --image-size-tablet: 700px;
+  --image-size-mobile: 375px;
+  --image-size: var(--image-size-mobile);
+  // Rules
+  > .image
+      img
+        --ratio: var(--ratio-post);
+        --mwd: var(--image-size);
+
+// Tablet
+@media screen and (min-width: 541px)
+  .post
+    --image-size: var(--image-size-tablet);
+
+// Notebook
+@media screen and (min-width: 1025px)
+  .post
+    --image-size: var(--image-size-notebook);

@@ -1,0 +1,15 @@
+// Mini Post
+.mini-post
+  --image-size-notebook: 410px;
+  --image-size-mobile: 375px;
+  --image-size: var(--image-size-mobile);
+  // Rules
+  > .image
+      img
+        --ratio: var(--ratio-mini-post);
+        --mwd: var(--image-size);
+
+// Notebook
+@media screen and (min-width: 1025px)
+  .mini-post
+    --image-size: var(--image-size-notebook);
