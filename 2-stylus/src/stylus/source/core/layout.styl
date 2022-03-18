@@ -1,0 +1,80 @@
+/*
+  Media querys
+  These values were chosen after analyzing the data from this source https://gs.statcounter.com/
+  <=540 Mobile (my moto G30 (540x1200)
+  541..1024 Tablet
+  1025..1440 Notebooks
+  1441..1920 Desktops and Notebooks FullHD
+  >=1921 Wide
+*/
+
+*
+  box-sizing: border-box;
+
+html
+  --main-bg: var(--bg-color-0);
+  --main-text-color: var(--text-color-0);
+  // Rules
+  background-color: var(--main-bg);
+  color: var(--main-text-color);
+  font-family: var(--main-font-family);
+  overflow-x: hidden;
+
+body
+  --max-width-desktop: 1512px;
+  --max-width-notebook: 1280px;
+  --max-width-tablet: 768px;
+  --max-width-mobile: 375px;
+  --max-width: var(--max-width-mobile);
+  // Rules
+  margin: 0 auto;
+  max-width: var(--max-width);
+  width: 100%;
+
+#header
+  grid-area: a;
+
+#main
+  grid-area: b;
+
+#sidebar
+  grid-area: c;
+
+@css {
+  #wrapper {
+    --template-columns-notebook: 470px 1fr;
+    --layout-notebook:
+      "a a"
+      "c b";
+    --template-columns-mobile: 1fr;
+    --layout-mobile:
+      "a"
+      "b"
+      "c";
+    --template-columns: var(--template-columns-mobile);
+    --layout: var(--layout-mobile);
+    display: grid;
+    grid-template-columns: var(--template-columns);
+    grid-template-rows: auto;
+    grid-template-areas: var(--layout);
+  }
+}
+
+// Tablet
+@media screen and (min-width: 541px)
+  body
+    --max-width: var(--max-width-tablet);
+
+// Notebook
+@media screen and (min-width: 1025px)
+  body
+    --max-width: var(--max-width-notebook);
+
+  #wrapper
+    --template-columns: var(--template-columns-notebook);
+    --layout: var(--layout-notebook);
+
+// Desktop
+@media screen and (min-width: 1441px)
+  body
+    --max-width: var(--max-width-desktop);
