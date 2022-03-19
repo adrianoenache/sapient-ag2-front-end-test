@@ -1,0 +1,24 @@
+// Meta
+.meta
+  --thumb-size: 46px;
+  --link-margins: 15px;
+  // Rules
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  .published
+    margin-bottom: var(--link-margins);
+  .author
+    align-items: center;
+    display: flex;
+    .name
+      margin-left: auto;
+    img
+      margin-left: var(--link-margins);
+
+// Tablet
+@media screen and (min-width: 541px)
+  .meta
+    margin-right: 0;
