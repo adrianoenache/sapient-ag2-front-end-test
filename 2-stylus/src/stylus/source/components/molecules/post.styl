@@ -4,25 +4,76 @@
   --image-size-tablet: 700px;
   --image-size-mobile: 375px;
   --image-size: var(--image-size-mobile);
+  --post-top-margin-notebook: 70px;
+  --post-top-margin-tablet: 40px;
+  --post-top-margin-mobile: 30px;
+  --post-top-margin: var(--post-bottom-margin-mobile);
+  --post-spacing-notebook: 55px;
+  --post-spacing-tablet: 33px;
+  --post-spacing-mobile: 16px;
+  --post-spacing: var(--post-spacing-mobile);
+  --post-footer-align-tablet: left;
+  --post-footer-align-mobile: center;
+  --post-footer-align: var(--post-footer-align-mobile);
+  --post-header-paragraph-margin-top-notebook: 25px;
+  --post-header-paragraph-margin-top-mobile: 20px;
+  --post-header-paragraph-margin-top: var(--post-header-paragraph-margin-top-mobile);
+  --post-header-margin-bottom-tablet: 60px;
+  --post-header-margin-bottom-mobile: 62px;
+  --post-header-margin-bottom: var(--post-header-margin-bottom-mobile);
+  --post-header-padding-notebook: 70px 56px 48px;
+  --post-header-padding-tablet: 72px 30px 81px;
+  --post-header-padding-mobile: 73px 65px 50px;
+  --post-header-padding: var(--post-header-padding-mobile);
+  --post-header-flex-direction-notebook: row;
+  --post-header-flex-direction-mobile: column;
+  --post-header-flex-direction: var(--post-header-flex-direction-mobile);
+  --post-header-text-align-notebook: left;
+  --post-header-text-align-mobile: center;
+  --post-header-text-align: var(--post-header-text-align-mobile);
   // Rules
+  background-color: var(--bg-color-1);
+  border: solid 1px var(--border-color-0);
+  margin-top: var(--post-bottom-margin);
+  &:first-of-type
+    margin-top: 0;
+  .header
+    border-bottom: solid 1px var(--border-color-0);
+    display: flex;
+    flex-direction: var(--post-header-flex-direction);
+    padding: var(--post-header-padding);
+    margin-bottom: var(--post-header-margin-bottom);
   > .image
-      img
-        --ar var(--ratio-post);
-        --mxw var(--image-size);
+    display: block;
+    font-size: 0;
+    margin: 0 auto;
+    max-width: var(--image-size);
+    img
+      --ar var(--ratio-post);
+      --mxw var(--image-size);
+      font-size: 1rem;
+  > .paragraph
+    margin: 60px var(--post-spacing) 48px;
+    max-width: var(--image-size);
   .title
+    :is(.secondary_title, .paragraph)
+      display: block;
+      text-align: var(--post-header-text-align);
+      width: 100%;
     .paragraph
       --c: var(--text-color-2);
       --fs: var(--font-size-1);
       --fw: var(--regular);
       --lh: var(--line-height-1);
       --ls: var(--letter-spacing-7);
+      margin-top: var(--post-header-paragraph-margin-top);
       text-transform: uppercase;
   .published
-      --c: var(--text-color-0);
-      --fs: var(--font-size-1);
-      --fw: var(--black);
-      --lh: var(--line-height-1);
-      --ls: var(--letter-spacing-3);
+    --c: var(--text-color-0);
+    --fs: var(--font-size-1);
+    --fw: var(--black);
+    --lh: var(--line-height-1);
+    --ls: var(--letter-spacing-3);
   .button
     --c-h: var(--text-color-4);
     --bgc-d: var(--bg-color-1);
@@ -30,11 +81,21 @@
     --bc-d: var(--border-color-0);
     --bc-h: var(--border-color-2);
     --mxw: 254px;
+  .footer
+    text-align: var(--post-footer-align);
+    padding-bottom: 57px;
+    padding-left: var(--post-spacing);
+    padding-right: var(--post-spacing);
 
 // Tablet
 @media screen and (min-width: 541px)
   .post
     --image-size: var(--image-size-tablet);
+    --post-bottom-margin: var(--post-top-margin-tablet);
+    --post-spacing: var(--post-spacing-tablet);
+    --post-footer-align: var(--post-footer-align-tablet);
+    --post-header-margin-bottom: var(--post-header-margin-bottom-tablet);
+    --post-header-padding: var(--post-header-padding-tablet);
     .secondary_title
       --fs: var(--font-size-4);
       --fw: var(--black);
@@ -45,3 +106,9 @@
 @media screen and (min-width: 1025px)
   .post
     --image-size: var(--image-size-notebook);
+    --post-spacing: var(--post-spacing-notebook);
+    --post-bottom-margin: var(--post-top-margin-notebook);
+    --post-header-paragraph-margin-top: var(--post-header-paragraph-margin-top-notebook);
+    --post-header-padding: var(--post-header-padding-notebook);
+    --post-header-flex-direction: var(--post-header-flex-direction-notebook);
+    --post-header-text-align: var(--post-header-text-align-notebook);
