@@ -16,7 +16,9 @@ $RECYCLE.BIN/
 *.msix
 *.msm
 *.msp
-2-css/node_modules/
+*Zone.Identifier
+node_modules/
+package-lock.json
 2-css/assets/css/
 
 !.gitignore
