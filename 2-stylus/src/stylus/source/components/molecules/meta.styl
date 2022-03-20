@@ -1,0 +1,34 @@
+// Meta
+.meta
+  --thumb-size: 46px;
+  --link-margins: 15px;
+  --meta-margin-top-notebook: 24px;
+  --meta-margin-top-mobile: 37px;
+  --meta-margin-top: var(--meta-margin-top-mobile);
+  // Rules
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--meta-margin-top);
+  max-width: fit-content;
+  width: 100%;
+  .published
+    margin-bottom: var(--link-margins);
+  .author
+    align-items: center;
+    display: flex;
+    .name
+      margin-left: auto;
+    img
+      margin-left: var(--link-margins);
+
+// Tablet
+@media screen and (min-width: 541px)
+  .meta
+    margin-right: 0;
+
+// Notebook
+@media screen and (min-width: 1025px)
+  .meta
+    --meta-margin-top: var(--meta-margin-top-notebook);

@@ -1,6 +1,6 @@
 {
   "name": "2-stylus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Teste front-end Pleno Prodigious BR",
   "author": "Prodigious BR",
   "license": "ISC",
@@ -10,6 +10,6 @@
     "start" : "npm run css-watch"
   },
   "devDependencies": {
-    "stylus": "^0.54.8"
+    "stylus": "^0.56.0"
   }
 }
