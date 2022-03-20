@@ -1,14 +1,54 @@
 // Posts
 .posts
   --image-size: 75px;
-  // Rules
+  --posts-column-gap-size: 20px;
+  --posts-row-gap-default-notebook: 54px;
+  --posts-row-gap-default-mobile: 24px;
+  --posts-row-gap-default: var(--posts-row-gap-default-mobile);
+  --posts-min-template-column-size: 374px;
+  --posts-margin-bottom-notebook: 45px;
+  --posts-margin-bottom-tablet: 34px;
+  --posts-margin-bottom-mobile: 42px;
+  --posts-margin-bottom: var(--posts-margin-bottom-mobile);
+  /* Rules */
+  display: grid;
+  grid-column-gap: var(--posts-column-gap-size);
+  grid-row-gap: var(--posts-row-gap-default);
+  grid-template-columns: repeat(auto-fit, minmax(var(--posts-min-template-column-size, 1fr), 1fr));
+  margin-bottom: var(--posts-margin-bottom);
+  > span > div
+    border-bottom: var(--border-style-1) var(--border-size-0) var(--border-color-4);
+    display: flex;
+    padding-bottom: 25px;
+  .header
+    display: flex;
+    flex-direction: column;
+    order: 2;
   .image
+    font-size: 0;
+    margin-right: 29px;
+    max-width: var(--image-size);
+    order: 1;
+    width: 100%;
     img
       --ar var(--ratio-posts);
       --mxw var(--image-size);
+      font-size: 1rem;
   .tertiary_title
     --c: var(--text-color-0);
     --fs: var(--font-size-1);
     --fw: var(--bold);
     --lh: var(--line-height-1);
     --ls: var(--letter-spacing-5);
+    margin-bottom: 10px;
+
+// Tablet
+@media screen and (min-width: 541px)
+  .posts
+    --posts-margin-bottom: var(--posts-margin-bottom-tablet);
+
+// Notebook
+@media screen and (min-width: 1025px)
+  .posts
+    --posts-row-gap-default: var(--posts-row-gap-default-notebook);
+    --posts-margin-bottom: var(--posts-margin-bottom-notebook);
