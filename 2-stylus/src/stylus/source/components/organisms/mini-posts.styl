@@ -1,0 +1,28 @@
+// Mini Posts
+.mini-posts
+  --mini-posts-column-gap-size: 20px;
+  --mini-posts-row-gap-default-tablet: 40px;
+  --mini-posts-row-gap-default-mobile: 30px;
+  --mini-posts-row-gap-default: var(--mini-posts-row-gap-default-mobile);
+  --mini-posts-min-template-column-size: 374px;
+  --mini-posts-margin-bottom-notebook: 82px;
+  --mini-posts-margin-bottom-tablet: 51px;
+  --mini-posts-margin-bottom-mobile: 37px;
+  --mini-posts-margin-bottom: var(--mini-posts-margin-bottom-mobile);
+  /* Rules */
+  display: grid;
+  grid-column-gap: var(--mini-posts-column-gap-size);
+  grid-row-gap: var(--mini-posts-row-gap-default);
+  grid-template-columns: repeat(auto-fit, minmax(var(--mini-posts-min-template-column-size, 1fr), 1fr));
+  margin-bottom: var(--mini-posts-margin-bottom);
+
+// Tablet
+@media screen and (min-width: 541px)
+  .mini-posts
+    --mini-posts-row-gap-default: var(--mini-posts-row-gap-default-tablet);
+    --mini-posts-margin-bottom: var(--mini-posts-margin-bottom-tablet);
+
+// Notebook
+@media screen and (min-width: 1025px)
+  .mini-posts
+    --mini-posts-margin-bottom: var(--mini-posts-margin-bottom-notebook);
