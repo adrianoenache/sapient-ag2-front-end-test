@@ -1,11 +1,21 @@
 // Blurb
 .blurb
+  --blurb-spacing-notebook: 0 26px 0 0;
+  --blurb-spacing-tablet: 0 40px;
+  --blurb-spacing-mobile: 0 28px;
+  --blurb-spacing: var(--blurb-spacing-mobile);
+  // Rules
+  margin-bottom: 40px;
+  margin-top: 18px;
+  padding: var(--blurb-spacing);
   .secondary_title
     --c: var(--text-color-0);
     --fs: var(--font-size-2);
     --fw: var(--bold);
     --lh: var(--line-height-1);
     --ls: var(--letter-spacing-6);
+    display: block;
+    margin-bottom: 27px;
     text-transform: uppercase;
   .paragraph
     --c: var(--text-color-3);
@@ -13,3 +23,15 @@
     --fw: var(--semi-bold);
     --lh: var(--line-height-4);
     --ls: var(--letter-spacing-0);
+    margin-bottom: 23px;
+    max-width: 375px;
+
+// Tablet
+@media screen and (min-width: 541px)
+  .blurb
+    --blurb-spacing: var(--blurb-spacing-tablet);
+
+// Notebook
+@media screen and (min-width: 1025px)
+  .blurb
+    --blurb-spacing: var(--blurb-spacing-notebook);
