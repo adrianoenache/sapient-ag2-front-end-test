@@ -31,6 +31,17 @@ body
   max-width: var(--max-width);
   width: 100%;
 
+#wrapper
+  --template-columns-notebook: 410px 60px 1fr;
+  --template-columns-mobile: 1fr;
+  --template-columns: var(--template-columns-mobile);
+  --layout: var(--layout-mobile);
+  // Rules
+  display: grid;
+  grid-template-columns: var(--template-columns);
+  grid-template-rows: auto;
+  grid-template-areas: var(--layout);
+
 #header
   grid-area: a;
 
@@ -42,21 +53,13 @@ body
 
 @css {
   #wrapper {
-    --template-columns-notebook: 410px 60px 1fr;
     --layout-notebook:
       "a a a"
       "c . b";
-    --template-columns-mobile: 1fr;
     --layout-mobile:
       "a"
       "b"
       "c";
-    --template-columns: var(--template-columns-mobile);
-    --layout: var(--layout-mobile);
-    display: grid;
-    grid-template-columns: var(--template-columns);
-    grid-template-rows: auto;
-    grid-template-areas: var(--layout);
   }
 }
 

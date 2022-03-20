@@ -16,6 +16,9 @@
     border: solid 1px var(--border-color-0);
     border-top: 0;
     order: 2;
+    display: grid;
+    grid-template-columns: var(--space-x) auto var(--space-x) var(--thumb-size) var(--space-x);
+    grid-template-rows: var(--space-top) auto auto var(--space-bottom);
     .tertiary_title
       grid-area: a;
       margin-bottom: 8px;
@@ -35,9 +38,6 @@
 
 @css {
   .mini-post .header {
-    display: grid;
-    grid-template-columns: var(--space-x) auto var(--space-x) var(--thumb-size) var(--space-x);
-    grid-template-rows: var(--space-top) auto auto var(--space-bottom);
     grid-template-areas:  ". . . . ."
                           ". a . c ."
                           ". b . c ."
