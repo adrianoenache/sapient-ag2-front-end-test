@@ -1,0 +1,45 @@
+// Links
+.links
+  --links-border: var(--border-style-0) var(--border-size-0) var(--border-color-0)
+  // Rules
+  background: var(--bg-color-1);
+  border: var(--links-border);
+  padding: 28px;
+  position: absolute;
+  right: 0;
+  top: 62px;
+  transform: translateX(100%);
+  transition: transform var(--transition-1);
+  > *
+    display: flex;
+    flex-direction: column;
+    .links_item
+      padding: 0 0 28px;
+      border: 0;
+      border-bottom-width: var(--border-size-0);
+      border-color: var(--border-color-1);
+      border-style: var(--border-style-0);
+      margin: 0 0 20px;
+      &:first-of-type
+        border-color: var(--border-color-0);
+      &:last-of-type
+        margin: 0;
+        border: 0;
+        padding: 0;
+
+// Notebook
+@media screen and (min-width: 1025px)
+  .links
+    border: 0;
+    border-left: var(--links-border);
+    margin-left: 29px;
+    padding: 0 0 0 28px;
+    position: static;
+    transform: translateX(0);
+    > *
+      flex-direction: row;
+      .links_item
+        padding: 0 28px 0 0;
+        border-bottom-width: 0;
+        border-right-width: var(--border-size-0);
+        margin: 0 20px 0 0;

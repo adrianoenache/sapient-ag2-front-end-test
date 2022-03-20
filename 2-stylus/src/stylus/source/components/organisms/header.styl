@@ -1,0 +1,21 @@
+// Header
+#header
+  // Rules
+  align-items: center;
+  background-color: var(--bg-color-1);
+  border: var(--border-style-0) var(--border-size-0) var(--border-color-0);
+  border-bottom-left-radius: var(--border-size-0);
+  display: flex;
+  height: 64px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  .main
+    margin-left: auto;
+
+// Notebook
+@media screen and (min-width: 1025px)
+  #header
+    .main
+      display: none;
