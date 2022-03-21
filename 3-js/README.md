@@ -21,3 +21,7 @@ O que precisa ser feito:
 * Criar a funcionalidade do carrossel
 
 > Os componentes devem ser criados em arquivos separados na pasta **src/js/components** e importados no arquivo *main.js*. A utilização de bibliotecas externas é permitida mas não recomendada, queremos ver o seu conhecimento em Javascript. Caso escolha por utilizar alguma biblioteca ela deve estar no **package.json** e deve compilada com o Javascript, sem alterar o arquivo HTML.
+
+---
+
+## A página do teste está acessível [neste link](https://adrianoenache.dev.br/test-js/).
