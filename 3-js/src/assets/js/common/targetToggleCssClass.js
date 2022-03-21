@@ -2,10 +2,13 @@
 import { toggleCSSClass } from './toggleCssClass';
 
 const targetToggleCssClass = ($selectorOfInitiator, $selectorOfTarget, cssClass) => {
-	const $menuButtom = document.querySelector($selectorOfInitiator);
-  $menuButtom.addEventListener('click', (e) => {
+
+	let $target = document.querySelector($selectorOfInitiator);
+
+	$target.addEventListener('click', (e) => {
 		toggleCSSClass($selectorOfTarget, cssClass);
 	});
+
 }
 
 export { targetToggleCssClass };
