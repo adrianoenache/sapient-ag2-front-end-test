@@ -1,7 +1,12 @@
-// Target Toggle CSS Class
-const toggleCSSClass = (myTarget, cssClass) => {
-	const $myTarget = document.querySelector(myTarget);
-	$myTarget.classList.toggle(cssClass);
+// Target toggle CSS Class
+import { toggleCSSClass } from './toggleCssClass';
+
+const targetToggleCssClass = ($selectorOfInitiator, $selectorOfTarget, cssClass) => {
+	const $menuButtom = document.querySelector($selectorOfInitiator);
+  $menuButtom.addEventListener('click', (e) => {
+		toggleCSSClass($selectorOfTarget, cssClass);
+	});
 }
 
-export { toggleCSSClass };
+export { targetToggleCssClass };
+
