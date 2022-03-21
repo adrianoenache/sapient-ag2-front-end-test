@@ -1,5 +1,5 @@
 // Open Menu
-import { targetToggleCssClass } from "../common/targetToggleCssClass";
+import { targetToggleCssClass } from '../common/targetToggleCssClass';
 
 const openWikiModal = () => {
   targetToggleCssClass('#button-modal', '.modal-wiki', '-active');

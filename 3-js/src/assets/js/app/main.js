@@ -1,12 +1,11 @@
 // Import the CSS
-import "../../../assets/css/main.css";
+import '../../../assets/css/main.css';
 
 // Import the components
-import { openMenu } from "../components/openMenu";
-import { playVideo } from "../components/playVideo";
-import { openWikiModal, closeWikiModal } from "../components/openCloseWikiModal";
-import { accordion } from "../components/accordion";
-
+import { openMenu } from '../components/openMenu';
+import { playVideo } from '../components/playVideo';
+import { openWikiModal, closeWikiModal } from '../components/openCloseWikiModal';
+import { accordion } from '../components/accordion';
 
 // Wrapper the funcions
 const initTheCode = () => {

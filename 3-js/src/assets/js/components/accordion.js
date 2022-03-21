@@ -1,5 +1,5 @@
 // Open Menu
-import { targetsToggleCssClass } from "../common/targetsToggleCssClass";
+import { targetsToggleCssClass } from '../common/targetsToggleCssClass';
 
 const accordion = () => {
   targetsToggleCssClass('.accordion .item', '-active');
