@@ -1,10 +1,13 @@
 // Import the CSS
 import "../../../assets/css/main.css";
 
+// Import the components
+import { openMenu } from "../components/openMenu";
+
 // Wrapper the funcions
 const initTheCode = () => {
-	//
-	console.log("### Init the code.");
+	// This open and close the menu.
+	openMenu();
 }
 
 // Start de functions
