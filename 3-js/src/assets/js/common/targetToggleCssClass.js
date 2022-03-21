@@ -9,4 +9,3 @@ const targetToggleCssClass = ($selectorOfInitiator, $selectorOfTarget, cssClass)
 }
 
 export { targetToggleCssClass };
-
