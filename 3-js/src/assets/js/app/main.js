@@ -6,6 +6,7 @@ import { openMenu } from '../components/openMenu';
 import { playVideo } from '../components/playVideo';
 import { openWikiModal, closeWikiModal } from '../components/openCloseWikiModal';
 import { accordion } from '../components/accordion';
+import { wiki } from '../components/wiki';
 
 // Wrapper the funcions
 const initTheCode = () => {
@@ -24,6 +25,9 @@ const initTheCode = () => {
 
   // This will aply and remove de CSS classes making the accordion efect.
   accordion();
+
+  // Not finished
+  wiki();
 
 }
 
