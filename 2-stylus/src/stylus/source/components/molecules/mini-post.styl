@@ -1,0 +1,51 @@
+// Mini Post
+.mini-post
+  --image-size-notebook: 410px;
+  --image-size-mobile: 375px;
+  --image-size: var(--image-size-mobile);
+  --thumb-size: 46px;
+  --space-top: 37px;
+  --space-bottom: 26px;
+  --space-x: 23px;
+  // Rules
+  display: flex;
+  flex-direction: column;
+  max-width: var(--image-size);
+  .header
+    background-color: var(--bg-color-1);
+    border: var(--border-style-0) var(--border-size-0) var(--border-color-0);
+    border-top: 0;
+    order: 2;
+    display: grid;
+    grid-template-columns: var(--space-x) auto var(--space-x) var(--thumb-size) var(--space-x);
+    grid-template-rows: var(--space-top) auto auto var(--space-bottom);
+    .tertiary_title
+      grid-area: a;
+      margin-bottom: 8px;
+    .published
+      grid-area: b;
+    .author
+      grid-area: c;
+      max-width: var(--thumb-size);
+  > .image
+      display: inline-block;
+      font-size: 0;
+      order: 1;
+      img
+        --ar var(--ratio-mini-post);
+        --mxw var(--image-size);
+        font-size: 1rem;
+
+@css {
+  .mini-post .header {
+    grid-template-areas:  ". . . . ."
+                          ". a . c ."
+                          ". b . c ."
+                          ". . . . .";
+  }
+}
+
+// Notebook
+@media screen and (min-width: 1025px)
+  .mini-post
+    --image-size: var(--image-size-notebook);

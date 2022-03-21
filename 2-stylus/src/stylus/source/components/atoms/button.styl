@@ -1,0 +1,28 @@
+// Button config
+// Inherits settings from a atom
+.button
+  --bgc-d: var(--bg-color-0);
+  --bgc-h: var(--bg-color-1);
+  --bgc: var(--bgc-d);
+  --bc-d: var(--border-color-3);
+  --bc-h: var(--border-color-2);
+  --bc: var(--bc-d);
+  // Rules
+  --pulse-outline-start-color: var(--border-color-5);
+  --c-d: var(--text-color-0);
+  background-color: var(--bgc);
+  border: var(--border-style-0) var(--border-size-0);
+  border-color: var(--bc);
+  display: var(--dp, inline-block);
+  font-size: var(--font-size-1);
+  font-weight: var(--bold);
+  line-height: var(--line-height-1);
+  letter-spacing: var(--letter-spacing-7);
+  max-width: var(--mxw, fit-content);
+  text-align: var(--ta, center);
+  padding: var(--pd-y, 20px) var(--pd-x, 38px);
+  transition: background-color var(--transition-0), border-color var(--transition-0);
+  width: var(--w, 100%);
+  &:hover
+    --bgc: var(--bgc-h);
+    --bc: var(--bc-h);

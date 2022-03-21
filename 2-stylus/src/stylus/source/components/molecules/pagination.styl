@@ -1,0 +1,48 @@
+// Pagination
+.pagination
+  --pagination-padding-notebook: 44px 0 141px;
+  --pagination-padding-tablet: 32px 0 36px;
+  --pagination-padding-mobile: 40px 0 59px;
+  --pagination-padding: var(--pagination-padding-mobile);
+  --pagination-width-notebook: auto;
+  --pagination-width-tablet: 50%;
+  --pagination-width-mobile: 100%;
+  --pagination-width: var(--pagination-width-mobile);
+  --pagination-previous-margin-notebook: 0 20px 0 0;
+  --pagination-previous-margin-tablet: 0 10px 0 auto;
+  --pagination-previous-margin-mobile: 0 auto 25px auto;
+  --pagination-previous-margin: var(--pagination-previous-margin-mobile);
+  --pagination-next-margin-notebook: 0;
+  --pagination-next-margin-tablet: 0 auto 0 10px;
+  --pagination-next-margin-mobile: 0 auto;
+  --pagination-next-margin: var(--pagination-next-margin-mobile);
+  // Rules
+  font-size: 0;
+  padding: var(--pagination-padding);
+  > *
+    display: inline-block;
+    min-width: 269px; // Fix for Firefox
+    width: var(--pagination-width);
+  .button
+    display: block;
+    white-space: nowrap;
+    &.previous
+      margin: var(--pagination-previous-margin);
+    &.next
+      margin: var(--pagination-next-margin);
+
+// Tablet
+@media screen and (min-width: 541px)
+  .pagination
+    --pagination-padding: var(--pagination-padding-tablet);
+    --pagination-width: var(--pagination-width-tablet);
+    --pagination-previous-margin: var(--pagination-previous-margin-tablet);
+    --pagination-next-margin: var(--pagination-next-margin-tablet);
+
+// Notebook
+@media screen and (min-width: 1025px)
+  .pagination
+    --pagination-padding: var(--pagination-padding-notebook);
+    --pagination-width: var(--pagination-width-notebook);
+    --pagination-previous-margin: var(--pagination-previous-margin-notebook);
+    --pagination-next-margin: var(--pagination-next-margin-notebook);

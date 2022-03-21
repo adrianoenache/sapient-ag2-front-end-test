@@ -1,0 +1,103 @@
+/*
+  Media querys
+  These values were chosen after analyzing the data from this source https://gs.statcounter.com/
+  <=540 Mobile (my moto G30 (540x1200)
+  541..1024 Tablet
+  1025..1440 Notebooks
+  1441..1920 Desktops and Notebooks FullHD
+  >=1921 Wide
+*/
+
+*
+  box-sizing: border-box;
+
+html
+  --main-bg: var(--bg-color-0);
+  --main-text-color: var(--text-color-0);
+  --scroll-thumb-background: var(--border-color-2);
+  --scroll-thumb-background-hover: var(--border-color-5);
+  --scroll-bar-background: var(--bg-color-0);
+  --scroll-bar-width-firefox: thin;
+  --scroll-bar-width-chromium: 8px;
+  // Rules
+  background-color: var(--main-bg);
+  color: var(--main-text-color);
+  font-family: var(--main-font-family);
+  overflow-x: hidden;
+  /* -moz- Firefox custom scroll */
+  scrollbar-color: var(--scroll-thumb-background) var(--scroll-bar-background);
+  scrollbar-width: var(--scroll-bar-width-firefox);
+  /* -webkit- Edge, Chrome, Opera, Safari custom scroll */
+  &::-webkit-scrollbar
+    background: var(--scroll-bar-background);
+    width: var(--scroll-bar-width-chromium);
+    height: var(--scroll-bar-width-chromium);
+  &::-webkit-scrollbar-thumb
+    background: var(--scroll-thumb-background);
+    border: solid 1px var(--scroll-bar-background);
+  &::-webkit-scrollbar-thumb:hover
+    background: var(--scroll-thumb-background-hover);
+
+body
+  --max-width-desktop: 1512px;
+  --max-width-notebook: 1280px;
+  --max-width-tablet: 768px;
+  --max-width-mobile: 375px;
+  --max-width: var(--max-width-mobile);
+  --padding-top-notebook: 110px;
+  --padding-top-tablet: 124px;
+  --padding-top-mobile: 103px;
+  --padding-top: var(--padding-top-mobile);
+  // Rules
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding-top: var(--padding-top);
+  width: 100%;
+
+#wrapper
+  --template-columns-notebook: 410px 60px 1fr;
+  --template-columns-mobile: 1fr;
+  --template-columns: var(--template-columns-mobile);
+  --layout: var(--layout-mobile);
+  // Rules
+  display: grid;
+  grid-template-columns: var(--template-columns);
+  grid-template-rows: auto;
+  grid-template-areas: var(--layout);
+
+#main
+  grid-area: a;
+
+#sidebar
+  grid-area: b;
+
+@css {
+  #wrapper {
+    --layout-notebook:
+      "b . a";
+    --layout-mobile:
+      "a"
+      "b";
+  }
+}
+
+// Tablet
+@media screen and (min-width: 541px)
+  body
+    --max-width: var(--max-width-tablet);
+    --padding-top: var(--padding-top-tablet);
+
+// Notebook
+@media screen and (min-width: 1025px)
+  body
+    --max-width: var(--max-width-notebook);
+    --padding-top: var(--padding-top-notebook);
+
+  #wrapper
+    --template-columns: var(--template-columns-notebook);
+    --layout: var(--layout-notebook);
+
+// Desktop
+@media screen and (min-width: 1441px)
+  body
+    --max-width: var(--max-width-desktop);
